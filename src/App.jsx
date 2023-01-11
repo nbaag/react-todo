@@ -9,7 +9,7 @@ const todos = [
 
 const App = () => {
   return (
-  <div>
+  <div className=''>
     {todos.map(todo => (
       <TodoItem key={todo.id} todo={todo} />
     ))}
