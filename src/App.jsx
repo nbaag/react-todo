@@ -2,14 +2,8 @@ import { useState } from "react";
 import AddField from "./components/AddField";
 import TodoItem from "./components/TodoItem";
 
-const todosList = [
-  { id: 123, title: "JavaScript", isComplite: false },
-  { id: 213, title: "Vue", isComplite: true },
-  { id: 321, title: "React", isComplite: false },
-];
-
 const App = () => {
-  const [todos, setTodos] = useState(todosList);
+  const [todos, setTodos] = useState([]);
 
   const changeTodo = (id) => {
     const copy = [...todos];
@@ -19,9 +13,6 @@ const App = () => {
   };
 
   const deleteTodo = (id) => {
-    // const copy = [...todos];
-    // copy.filter((t) => t.id != id);
-    // setTodos(copy);
     setTodos([...todos].filter((t) => t.id != id));
   };
 
